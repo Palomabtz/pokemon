@@ -7,7 +7,7 @@ import { Pokemon } from '../../interfaces';
 import { getPokemonInfo, localFavorites } from '../../utils';
 import { useState } from 'react';
 
-import confetti from 'canvas-confetti';
+//import confetti from 'canvas-confetti';
 
 interface Props {
   pokemon: Pokemon;
@@ -22,18 +22,18 @@ const PokemonPage: NextPage<Props> = ({ pokemon }) => {
    localFavorites.toggleFavorite(pokemon.id);
    setIsInFavorites(!isInFavorites);
 
-   if(!isInFavorites){
-    confetti({
-      zIndex:999,
-      particleCount: 100,
-      spread: 160,
-      angle: -100,
-      origin:{
-        x:1,
-        y:0,
-      }
-    })
-   }
+  //  if(!isInFavorites){
+  //   confetti({
+  //     zIndex:999,
+  //     particleCount: 100,
+  //     spread: 160,
+  //     angle: -100,
+  //     origin:{
+  //       x:1,
+  //       y:0,
+  //     }
+  //   })
+  //  }
   };
     
     return (
